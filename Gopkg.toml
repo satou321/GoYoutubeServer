@@ -47,3 +47,4 @@
 
 [metadata.heroku]
   root-package = "github.com/satou321/GoYoutubeServer"
+  install = [ ".", "./cmd/..." ]
