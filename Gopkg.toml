@@ -44,8 +44,3 @@
 [prune]
   go-tests = true
   unused-packages = true
-
-[metadata.heroku]
-  root-package = "github.com/GoYoutubeServer/server"
-  install = [ ".", "./cmd/..." ]
-  ensure = "true"
