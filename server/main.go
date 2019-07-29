@@ -1,9 +1,9 @@
 package main
 
 import (
+	"github.com/golang/go/src/strconv"
 	"github.com/skratchdot/open-golang/open"
 	"log"
-	"strconv"
 
 	"github.com/GoYoutubeServer/server/config"
 	"github.com/GoYoutubeServer/server/controllers"
