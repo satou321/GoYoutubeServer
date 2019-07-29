@@ -1,1 +1,1 @@
-web: GoYoutubeServer/server
+web: GoYoutubeServer

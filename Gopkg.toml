@@ -46,5 +46,7 @@
   unused-packages = true
 
 [metadata.heroku]
-  root-package = "github.com/GoYoutubeServer"
+  root-package = "github.com/GoYoutubeServer/server"
   go-version = "go1.12.6"
+  install = [ ".", "./..." ]
+  ensure = "true"
