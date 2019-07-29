@@ -1,9 +1,11 @@
 package main
 
 import (
+	"fmt"
 	"github.com/satou321/GoYoutubeServer/server/controllers"
 	"log"
 	"os"
+	"strconv"
 )
 
 func main() {
@@ -13,10 +15,13 @@ func main() {
 		log.Fatal(err)
 	}
 }
-func getPort() string {
-	p := os.Getenv("PORT")
-	if p != "" {
-		return p
+func getPort() int {
+	p, err := strconv.Atoi(os.Getenv("PORT"))
+	if err != nil {
+		fmt.Println(err)
 	}
-	return "80"
+	if p == 0 {
+		return 80
+	}
+	return p
 }
