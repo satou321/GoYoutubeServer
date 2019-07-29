@@ -26,7 +26,7 @@ func APIError(w http.ResponseWriter, errMessage string, code int) {
 
 	w.Write(jsonError)
 }
-func StartWebServer(port string) error {
+func StartWebServer(port int) error {
 	addr := fmt.Sprintf(":%d", port)
 	log.Println("[info] http server listening", addr)
 	return http.ListenAndServe(addr, nil)
