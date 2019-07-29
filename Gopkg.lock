@@ -18,14 +18,6 @@
   version = "v1.2.0"
 
 [[projects]]
-  branch = "master"
-  digest = "1:519621a373ae7d96a16415a6356d7b97722ed3a292f73409b361b7c0322971e3"
-  name = "github.com/skratchdot/open-golang"
-  packages = ["open"]
-  pruneopts = "UT"
-  revision = "79abb63cd66e41cb1473e26d11ebdcd68b04c8e5"
-
-[[projects]]
   digest = "1:00f2a9df72922aa64eae4037597f8fde82ffb86a9734e16b6a59598aa38278f9"
   name = "gopkg.in/ini.v1"
   packages = ["."]
@@ -39,7 +31,6 @@
   input-imports = [
     "github.com/golang/go/src/bytes",
     "github.com/julienschmidt/httprouter",
-    "github.com/skratchdot/open-golang/open",
     "gopkg.in/ini.v1",
   ]
   solver-name = "gps-cdcl"
