@@ -26,17 +26,7 @@ func APIError(w http.ResponseWriter, errMessage string, code int) {
 	w.Write(jsonError)
 }
 func StartWebServer(port string) error {
-	//fmt.Println("PORT NUMBER:", port)
-	//addr := fmt.Sprintf(":%d", port)
-	//addr := ":" + port
-	log.Println("[info] http server listening", port)
-	//return http.ListenAndServe(":"+port, nil)
-	//	port := os.Getenv("PORT")
-	if port == "" {
-		port = "80"
-	}
-	print(port)
-
-	//http.ListenAndServe(":"+port, Log(router))
-	return http.ListenAndServe(":"+port, nil)
+	addr := ":" + port
+	log.Println("[info] http server listening", addr)
+	return http.ListenAndServe(addr, nil)
 }
