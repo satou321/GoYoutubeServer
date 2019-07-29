@@ -4,14 +4,13 @@ import (
 	"fmt"
 	"github.com/satou321/GoYoutubeServer/server/controllers"
 	"log"
-	"os"
-	"strconv"
 )
 
 func main() {
 	//var cfg Config
 	//cfg := config.Config
-	port, _ := strconv.Atoi(os.Args[1])
+	//port, _ := strconv.Atoi(os.Args[1])
+	port := 80
 	fmt.Println(port)
 	//port := (os.Getenv("$PORT")||"8083")
 	if port == 0 {
