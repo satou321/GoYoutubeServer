@@ -9,7 +9,6 @@ import (
 	"net/url"
 	"strconv"
 
-	"github.com/satou321/GoYoutubeServer/server/config"
 	"github.com/satou321/GoYoutubeServer/server/models"
 )
 
@@ -87,7 +86,8 @@ func (api *APIClient) GetYoutube(r *http.Request) (*models.YoutubeJson, error) {
 		maxResults = 20
 	}
 
-	qmap["key"] = config.Config.APIKey
+	//qmap["key"] = config.Config.APIKey
+	//qmap["key"] = os.Getenv("$YOUTUBE_API_KEY")
 	qmap["part"] = "snippet"
 	// qmap["regionCode"] = "JP"
 	// qmap["hl"] = "ja-JP"
