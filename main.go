@@ -20,6 +20,7 @@ func getPort() int {
 	if err != nil {
 		fmt.Println(err)
 	}
+	fmt.Println(p)
 	if p == 0 {
 		return 80
 	}

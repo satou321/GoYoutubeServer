@@ -28,7 +28,7 @@ func APIError(w http.ResponseWriter, errMessage string, code int) {
 }
 func StartWebServer(port int) error {
 	//fmt.Println("PORT NUMBER:", port)
-	addr := fmt.Sprintf(":%s", port)
+	addr := fmt.Sprintf(":%d", port)
 	//addr := ":" + port
 	log.Println("[info] http server listening", addr)
 	return http.ListenAndServe(addr, nil)
