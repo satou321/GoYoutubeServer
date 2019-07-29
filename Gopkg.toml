@@ -48,4 +48,5 @@
 [metadata.heroku]
   root-package = "github.com/satou321/GoYoutubeServer"
   go-version = "1.12.6"
-  install = [ "./..." ]
+  install = [".", "./..." ]
+  ensure = "true"
