@@ -1,11 +1,9 @@
 package main
 
 import (
-	"fmt"
 	"github.com/satou321/GoYoutubeServer/server/controllers"
 	"log"
 	"os"
-	"strconv"
 )
 
 func main() {
