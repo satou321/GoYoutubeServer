@@ -1,4 +1,4 @@
-package main
+package cmd
 
 import (
 	"github.com/satou321/GoYoutubeServer/server/config"
