@@ -3,8 +3,6 @@ package main
 import (
 	"github.com/satou321/GoYoutubeServer/server/config"
 	"github.com/satou321/GoYoutubeServer/server/controllers"
-
-	//"github.com/satou321/GoYoutubeServer/server/controllers"
 	"log"
 )
 
@@ -16,6 +14,4 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	//log.Fatal(http.ListenAndServe(":"+port, nil))
-
 }
