@@ -3,7 +3,7 @@ package controllers
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/satou321/MyGoApiYoutube/.history/server/youtube"
+	"github.com/satou321/GoYoutubeServer/server/youtube"
 	"html"
 	"io/ioutil"
 	"log"
@@ -12,7 +12,6 @@ import (
 	"os"
 
 	"github.com/julienschmidt/httprouter"
-	//"github.com/satou321/GoYoutubeServer/server/config"
 	"github.com/satou321/GoYoutubeServer/server/models"
 )
 
