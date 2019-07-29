@@ -1,7 +1,7 @@
 
 /tmp/
-/server/config.ini
 .gitignore
 .idea/
 cmd/
 main.exe
+vendor/vendor.json

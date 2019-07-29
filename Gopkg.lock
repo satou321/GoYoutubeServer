@@ -9,9 +9,20 @@
   revision = "348b672cd90d8190f8240323e372ecd1e66b59dc"
   version = "v1.2.0"
 
+[[projects]]
+  digest = "1:00f2a9df72922aa64eae4037597f8fde82ffb86a9734e16b6a59598aa38278f9"
+  name = "gopkg.in/ini.v1"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "8659100d2d9ecf3760a41838b1886db49426d001"
+  version = "v1.44.0"
+
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  input-imports = ["github.com/julienschmidt/httprouter"]
+  input-imports = [
+    "github.com/julienschmidt/httprouter",
+    "gopkg.in/ini.v1",
+  ]
   solver-name = "gps-cdcl"
   solver-version = 1

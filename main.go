@@ -1,18 +1,21 @@
 package main
 
 import (
+	"github.com/satou321/GoYoutubeServer/server/config"
+	"github.com/satou321/GoYoutubeServer/server/controllers"
+
 	//"github.com/satou321/GoYoutubeServer/server/controllers"
 	"log"
-	"net/http"
-	"os"
 )
 
 func main() {
+	//var cfg Config
+	cfg := config.Config
 
-	port := os.Getenv("PORT")
-	if port == "" {
-		port = "80"
+	err := controllers.StartWebServer(cfg.Port)
+	if err != nil {
+		log.Fatal(err)
 	}
-	log.Fatal(http.ListenAndServe(":"+port, nil))
+	//log.Fatal(http.ListenAndServe(":"+port, nil))
 
 }

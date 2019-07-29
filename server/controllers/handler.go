@@ -3,7 +3,6 @@ package controllers
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/satou321/GoYoutubeServer/server/youtube"
 	"html"
 	"io/ioutil"
 	"log"
@@ -12,7 +11,9 @@ import (
 	"os"
 
 	"github.com/julienschmidt/httprouter"
+	"github.com/satou321/GoYoutubeServer/server/config"
 	"github.com/satou321/GoYoutubeServer/server/models"
+	"github.com/satou321/GoYoutubeServer/server/youtube"
 )
 
 func Index(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
@@ -20,8 +21,7 @@ func Index(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 }
 
 func YoutubePage(w http.ResponseWriter, r *http.Request) {
-	//apiClient := youtube.New(config.Config.APIKey)
-	apiClient := youtube.New(os.Getenv(os.Getenv("YOUTUBE_API_KEY")))
+	apiClient := youtube.New(config.Config.APIKey)
 	v, err := apiClient.GetYoutube(r)
 	if err != nil {
 		fmt.Println("handler.go :", err)
