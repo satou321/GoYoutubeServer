@@ -1,1 +1,1 @@
-web: bin/GoYoutubeServer
+web: main
