@@ -29,7 +29,7 @@
   unused-packages = true
 
 [metadata.heroku]
-  root-package = "github.com/satou321/MyGoApiServer/cmd"
+  root-package = "github.com/satou321/MyGoApiServer"
   go-version = "go1.12"
   install = [ ".", "./cmd/..." ]
   ensure = "true"
