@@ -3,7 +3,5 @@
 /server/config.ini
 .gitignore
 .idea/
-/_vendor-20190729111443/
-/_vendor-20190729095559/
 cmd/
 main.exe
