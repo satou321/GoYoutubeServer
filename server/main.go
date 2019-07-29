@@ -1,17 +1,14 @@
 package main
 
 import (
-	"github.com/skratchdot/open-golang/open"
-	"log"
-	"strconv"
-
 	"github.com/satou321/GoYoutubeServer/server/config"
 	"github.com/satou321/GoYoutubeServer/server/controllers"
+	"log"
 )
 
 func init() {
-	port := strconv.Itoa(config.Config.Port)
-	log.Print(open.Run("http://localhost:" + port + "/r"))
+	//port := strconv.Itoa(config.Config.Port)
+	//log.Print(open.Run("http://localhost:" + port + "/r"))
 }
 
 func main() {
