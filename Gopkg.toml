@@ -30,6 +30,6 @@
 
 [metadata.heroku]
   root-package = "github.com/satou321/MyGoApiServer"
-  go-version = "go1.12"
+  go-version = "1.12"
   install = [ "./..." ]
   ensure = "true"
