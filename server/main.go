@@ -5,8 +5,8 @@ import (
 	"log"
 	"strconv"
 
-	"github.com/GoYoutubeServer/server/config"
-	"github.com/GoYoutubeServer/server/controllers"
+	"github.com/satou321/GoYoutubeServer/server/config"
+	"github.com/satou321/GoYoutubeServer/server/controllers"
 )
 
 func init() {

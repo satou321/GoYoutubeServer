@@ -3,12 +3,9 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:efc4f916aba54046e9a6d1f6d3e7a87ed9f006db158f8a64e6ac118648439c4e"
+  digest = "1:79efd72f9fe2d6a0d34bf9bba68c4c0bfeaa45967d64b9f6026650badef73c46"
   name = "github.com/golang/go"
-  packages = [
-    "src/bytes",
-    "src/strconv",
-  ]
+  packages = ["src/bytes"]
   pruneopts = "UT"
   revision = "c4ca60313ef7fd0b9d2c223889caeb20147309ac"
 
@@ -41,7 +38,6 @@
   analyzer-version = 1
   input-imports = [
     "github.com/golang/go/src/bytes",
-    "github.com/golang/go/src/strconv",
     "github.com/julienschmidt/httprouter",
     "github.com/skratchdot/open-golang/open",
     "gopkg.in/ini.v1",

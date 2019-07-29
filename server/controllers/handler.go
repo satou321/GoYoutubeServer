@@ -10,10 +10,10 @@ import (
 	"net/url"
 	"os"
 
-	"github.com/GoYoutubeServer/server/config"
-	"github.com/GoYoutubeServer/server/models"
-	"github.com/GoYoutubeServer/server/youtube"
 	"github.com/julienschmidt/httprouter"
+	"github.com/satou321/GoYoutubeServer/server/config"
+	"github.com/satou321/GoYoutubeServer/server/models"
+	"github.com/satou321/GoYoutubeServer/server/youtube"
 )
 
 func Index(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {

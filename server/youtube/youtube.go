@@ -9,8 +9,8 @@ import (
 	"net/url"
 	"strconv"
 
-	"github.com/GoYoutubeServer/server/config"
-	"github.com/GoYoutubeServer/server/models"
+	"github.com/satou321/GoYoutubeServer/server/config"
+	"github.com/satou321/GoYoutubeServer/server/models"
 )
 
 const baseURL = "https://www.googleapis.com"
