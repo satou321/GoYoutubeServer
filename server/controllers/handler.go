@@ -21,7 +21,7 @@ func Index(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 
 func YoutubePage(w http.ResponseWriter, r *http.Request) {
 	//apiClient := youtube.New(config.Config.APIKey)
-	apiClient := youtube.New(os.Getenv("$YOUTUBE_API_KEY"))
+	apiClient := youtube.New(os.Getenv(os.Getenv("YOUTUBE_API_KEY")))
 	v, err := apiClient.GetYoutube(r)
 	if err != nil {
 		fmt.Println("handler.go :", err)
