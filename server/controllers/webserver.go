@@ -2,7 +2,6 @@ package controllers
 
 import (
 	"encoding/json"
-	"fmt"
 	"log"
 	"net/http"
 )
@@ -26,10 +25,10 @@ func APIError(w http.ResponseWriter, errMessage string, code int) {
 
 	w.Write(jsonError)
 }
-func StartWebServer(port int) error {
+func StartWebServer(port string) error {
 	//fmt.Println("PORT NUMBER:", port)
-	addr := fmt.Sprintf(":%d", port)
+	//addr := fmt.Sprintf(":%d", port)
 	//addr := ":" + port
-	log.Println("[info] http server listening", addr)
-	return http.ListenAndServe(addr, nil)
+	log.Println("[info] http server listening", port)
+	return http.ListenAndServe(":"+port, nil)
 }
