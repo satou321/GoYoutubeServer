@@ -1,1 +1,1 @@
-web: GoYoutubeServer
+web: GoYoutubeServer $PORT
