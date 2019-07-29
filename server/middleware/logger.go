@@ -1,9 +1,7 @@
 package middleware
 
 import (
-	"github.com/golang/go/src/bytes"
 	"github.com/julienschmidt/httprouter"
-	"html/template"
 	"log"
 	"net/http"
 	"time"
@@ -32,42 +30,42 @@ type LineOfLog struct {
 }
 
 //TemplateOfLog
-var TemplateOfLog = `
-Remote address:   {{.RemoteAddr}}
-Content-Type:     {{.ContentType}}
-HTTP method:      {{.Method}}
-path:
-{{.Path}}
-query string:
-{{.Query}}
-`
-
-//Log using LineOfLog
-func Log(handler http.Handler) http.Handler {
-	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		bufbody := new(bytes.Buffer)
-		//bufbody.ReadFrom(r.Body)
-		body := bufbody.String()
-
-		line := LineOfLog{
-			r.RemoteAddr,
-			r.Header.Get("Content-Type"),
-			r.URL.Path,
-			r.URL.RawQuery,
-			r.Method, body,
-		}
-		tmpl, err := template.New("line").Parse(TemplateOfLog)
-		if err != nil {
-			panic(err)
-		}
-
-		bufline := new(bytes.Buffer)
-		err = tmpl.Execute(bufline, line)
-		if err != nil {
-			panic(err)
-		}
-
-		//log.Printf(bufline.String())
-		handler.ServeHTTP(w, r)
-	})
-}
+//var TemplateOfLog = `
+//Remote address:   {{.RemoteAddr}}
+//Content-Type:     {{.ContentType}}
+//HTTP method:      {{.Method}}
+//path:
+//{{.Path}}
+//query string:
+//{{.Query}}
+//`
+//
+////Log using LineOfLog
+//func Log(handler http.Handler) http.Handler {
+//	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+//		bufbody := new(bytes.Buffer)
+//		//bufbody.ReadFrom(r.Body)
+//		body := bufbody.String()
+//
+//		line := LineOfLog{
+//			r.RemoteAddr,
+//			r.Header.Get("Content-Type"),
+//			r.URL.Path,
+//			r.URL.RawQuery,
+//			r.Method, body,
+//		}
+//		tmpl, err := template.New("line").Parse(TemplateOfLog)
+//		if err != nil {
+//			panic(err)
+//		}
+//
+//		bufline := new(bytes.Buffer)
+//		err = tmpl.Execute(bufline, line)
+//		if err != nil {
+//			panic(err)
+//		}
+//
+//		//log.Printf(bufline.String())
+//		handler.ServeHTTP(w, r)
+//	})
+//}
