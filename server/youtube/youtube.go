@@ -55,6 +55,9 @@ func (api *APIClient) doRequest(method, urlPath string, query map[string]string)
 		return nil, err
 	}
 	defer resp.Body.Close()
+
+	// TODO:NewDecoder
+	// https://www.datadoghq.com/blog/crossing-streams-love-letter-gos-io-reader/
 	body, err = ioutil.ReadAll(resp.Body)
 	if err != nil {
 		return nil, err
