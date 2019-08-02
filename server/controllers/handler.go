@@ -30,6 +30,7 @@ func YoutubePage(w http.ResponseWriter, r *http.Request) {
 	prettyJson, _ := json.MarshalIndent(v, "", " ")
 	setHeadersHandler(w, r)
 	log.Print(w.Write(prettyJson))
+
 }
 func Mock(w http.ResponseWriter, r *http.Request) {
 	fmt.Println(r.Host, r.URL.Path, r.URL.Query())

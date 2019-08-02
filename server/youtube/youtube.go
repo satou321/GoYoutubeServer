@@ -86,6 +86,7 @@ func (api *APIClient) GetYoutube(r *http.Request) (*models.YoutubeJson, error) {
 		maxResults = 20
 	}
 
+	qmap["key"] = r.URL.Query().Get("key")
 	//qmap["key"] = config.Config.APIKey
 	//qmap["key"] = os.Getenv("$YOUTUBE_API_KEY")
 	qmap["part"] = "snippet"
