@@ -66,7 +66,7 @@ func setHeadersHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("Origin", r.Header.Get("Origin"))
 	//domainによってAllowを可変する
 	switch host := r.Header.Get("Origin"); host {
-	case "http://10.0.1.6:8080", "http://10.0.1.6:8083", "http://localhost:8082", "http://10.0.1.6:3002", "http://10.0.1.6:8082'":
+	case "https://afternoon-journey-76929.herokuapp.com/", "http://10.0.1.6:8080", "http://10.0.1.6:8083", "http://localhost:8082", "http://10.0.1.6:3002", "http://10.0.1.6:8082'":
 		w.Header().Set("Access-Control-Allow-Origin", host)
 	default:
 	}
